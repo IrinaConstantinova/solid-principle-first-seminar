@@ -5,12 +5,12 @@ import dip1.model.Printable;
 
 import java.util.List;
 
-public class ReportPrinter implements Printable {
+public class ConsolePrinter implements Printable {
     @Override
     public void print(List<ReportItem> items) {
-        System.out.println("Output to printer");
+        System.err.println("Output to console");
         for (ReportItem item : items) {
-            System.out.format("printer %s - %f \n\r", item.getDescription(), item.getAmount());
+            System.err.format("print to console %s - %f \n\r", item.getDescription(), item.getAmount());
         }
     }
 }
